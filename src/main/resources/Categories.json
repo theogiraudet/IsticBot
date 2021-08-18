@@ -1,0 +1,91 @@
+[
+  {
+    "name": "L1 IE",
+    "roles": [
+      "L1 IE",
+      "Aide L1"
+    ],
+    "sub_categories": [
+      {
+        "name": "default",
+        "channels": [
+          {
+            "name": "général-l1",
+            "old_name": "general-l1",
+            "description": "Salon général réservé aux L1 IE"
+          },
+          {
+            "name": "anglais",
+            "description": "**U.E. :** Anglais\n**Resonsable :** Kristell Cahic\n**Adresse email :** kristell.cahic@univ-rennes1.fr"
+          }
+        ]
+      },
+      {
+        "name": "semestre-1",
+        "channels": [
+          {
+            "name": "cod",
+            "description": "**U.E. :** Codage\n**Resonsable :** Sophie Allain-Bailhache\n**Adresse email :** sophie.allain@univ-rennes1.fr"
+          },
+          {
+            "name": "phy",
+            "description": ""
+          },
+          {
+            "name": "si1",
+            "description": ""
+          },
+          {
+            "name": "die",
+            "description": ""
+          },
+          {
+            "name": "mat1",
+            "description": ""
+          },
+          {
+            "name": "fom",
+            "description": ""
+          },
+          {
+            "name": "inf1",
+            "description": ""
+          },
+          {
+            "name": "prr",
+            "description": ""
+          },
+          {
+            "name": "se1",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "name": "semestre-2",
+        "channels": [
+          {
+            "name": "info2",
+            "description": ""
+          },
+          {
+            "name": "mat2",
+            "description": ""
+          },
+          {
+            "name": "si2",
+            "description": ""
+          },
+          {
+            "name": "ppc",
+            "description": ""
+          },
+          {
+            "name": "eco",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  }
+]

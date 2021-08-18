@@ -1,0 +1,22 @@
+{
+    "drop": {
+        "description": "",
+        "permissions": [],
+        "pipe_restriction": "fb",
+        "arguments": [
+            {
+                "type": "string",
+                "tag": "bot",
+                "matches": "bot",
+                "arguments": [
+                    {
+                        "type": "object",
+                        "tag": "users",
+                        "keep_value": true,
+                        "execute": "dropBot"
+                    }
+                ]
+            }
+        ]
+    }
+}

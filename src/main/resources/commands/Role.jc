@@ -1,0 +1,61 @@
+{
+    "role": {
+        "description": "",
+        "permissions": [],
+        "pipe_restriction": "o",
+        "arguments": [
+            {
+                "type": "string",
+                "tag": "add",
+                "matches": "add",
+                "arguments": [
+                    {
+                        "type": "string",
+                        "tag": "role",
+                        "keep_value": true,
+                        "arguments": [
+                            {
+                                "type": "string...",
+                                "tag": "users",
+                                "keep_value": true,
+                                "execute": "addRole"
+                            }
+                            ,{
+                                "type": "object",
+                                "tag": "users",
+                                "keep_value": true,
+                                "execute": "addRole"
+                            }
+                        ]
+                    }
+                ]
+            },
+{
+                "type": "string",
+                "tag": "remove",
+                "matches": "remove",
+                "arguments": [
+                    {
+                        "type": "string",
+                        "tag": "role",
+                        "keep_value": true,
+                        "arguments": [
+                            {
+                                "type": "string...",
+                                "tag": "users",
+                                "keep_value": true,
+                                "execute": "removeRole"
+                            },
+                            {
+                                "type": "object",
+                                "tag": "users",
+                                "keep_value": true,
+                                "execute": "removeRole"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

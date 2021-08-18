@@ -1,0 +1,8 @@
+{
+    "getusers": {
+        "description": "",
+        "permissions": [],
+        "pipe_restriction": "fi",
+        "execute": "getAll"
+    }
+}

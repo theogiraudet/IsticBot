@@ -1,0 +1,21 @@
+{
+    "discord_update": {
+        "description": "Update the Discord from JSON descriptor",
+        "permissions": [],
+        "pipe_restriction": "o",
+        "arguments": [
+            {
+                "type": "string",
+                "tag": "plan",
+                "matches": "plan",
+                "execute": "plan"
+            },
+            {
+                "type": "string",
+                "tag": "apply",
+                "matches": "apply",
+                "execute": "apply"
+            }
+        ]
+    }
+}
