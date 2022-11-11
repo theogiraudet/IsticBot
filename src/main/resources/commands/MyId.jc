@@ -1,8 +1,0 @@
-{
-    "myid": {
-        "description": "",
-        "permissions": [],
-        "pipe_restriction": "i",
-        "execute": "getMyId"
-    }
-}
