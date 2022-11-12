@@ -3,8 +3,6 @@ package fr.istic.bot.core;
 import fr.istic.bot.commands.Say;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.interactions.commands.SlashCommandInteraction;
-import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData;
 
 import java.util.HashMap;
 
