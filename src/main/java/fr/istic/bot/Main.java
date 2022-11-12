@@ -1,33 +1,26 @@
 package fr.istic.bot;
 
-import discord4j.core.DiscordClient;
-import discord4j.core.GatewayDiscordClient;
-import discord4j.core.event.domain.message.MessageCreateEvent;
-import discord4j.core.object.entity.Message;
-import discord4j.gateway.intent.Intent;
-import discord4j.gateway.intent.IntentSet;
+import fr.istic.bot.core.CommandHandler;
+import fr.istic.bot.core.Listener;
+import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
 
+import static net.dv8tion.jda.api.requests.GatewayIntent.GUILD_MESSAGES;
+import static net.dv8tion.jda.api.requests.GatewayIntent.GUILD_VOICE_STATES;
 
 public class Main {
 
-    private static GatewayDiscordClient client;
+    public static void main(String... args) throws InterruptedException {
+        Dotenv dotenv = Dotenv.configure().load();
+        String token = dotenv.get("TOKEN");
 
-    public static void main(String... args) {
-        final String token = args[0];
-        DiscordClient discordClient = DiscordClient.create(token);
-        discordClient.gateway().setEnabledIntents(IntentSet.of(Intent.GUILD_MEMBERS));
-        client = discordClient.login().block();
-        client.on(MessageCreateEvent.class).subscribe(event -> {
-            final Message message = event.getMessage();
-            if ("!ping".equals(message.getContent())) {
-            }
-        });
+        JDA api = JDABuilder.create((token), GUILD_MESSAGES, GUILD_VOICE_STATES)
+                .addEventListeners(new Listener(new CommandHandler()))
+                .setActivity(Activity.playing("!help"))
+                .build();
+        api.awaitReady();
 
-        CommandInitiator.initialize();
-        client.onDisconnect().block();
-    }
-
-    public static GatewayDiscordClient getClient() {
-        return client;
     }
 }

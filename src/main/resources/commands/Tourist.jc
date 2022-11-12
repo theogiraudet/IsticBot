@@ -1,7 +1,0 @@
-{
-    "tourist": {
-        "description": "Make the bot say something.",
-        "permissions": [],
-        "execute": "count"
-    }
-}
