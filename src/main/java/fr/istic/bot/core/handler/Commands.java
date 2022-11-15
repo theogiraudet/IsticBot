@@ -1,18 +1,20 @@
-package fr.istic.bot.core;
+package fr.istic.bot.core.handler;
 
+import fr.istic.bot.commands.LightOut;
 import fr.istic.bot.commands.Say;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.util.HashMap;
 
-public class CommandHandler {
+public class Commands {
     private final HashMap<String, Class<? extends ListenerAdapter>> commands;
 
-    public CommandHandler() {
+    public Commands() {
         this.commands = new HashMap<>() {
             {
                 put("say", Say.class);
+                put("lightout", LightOut.class);
             }
         };
     }
